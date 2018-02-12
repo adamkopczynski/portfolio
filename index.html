@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Adam Kopczyński | Front End Developer</title>
+    <meta name="description" content="Adam Kopczyński - Junior Front-End Developer.">
+    <meta name="author" content="Adam Kopczyński">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="top-menu" aria-label="Main navigation">
+      <div class="top-menu__header">
+        <div class="top-menu__head">
+          <a href="/">
+            <div>
+              <p class="name">Adam Kopczyński</p>
+              <p class="profession">Front-End Developer</p>
+            </div>
+          </a>
+        </div>
+        <button class="top-menu__toggler">X</button>
+        <nav id="menu" class="dropdown">
+          <ul>
+            <li><a class="active" href="#start">Start</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <canvas class="particle-canvas"></canvas>
+    <header class="main-header">
+      <div class="main-header__content">
+        <h1>Adam Kopczyński</h1>
+        <p>Front-End Developer</p>
+        <a href="#about" class="more scroll"></a>
+      </div>
+      <a href="#about" class="more scroll" aria-label ="scroll down"
+title="scroll down">more</a>
+    </header>
+    <main class="about container">
+      <h2>About me</h2>
+      <figure class="photo">
+        <img src="" alt="My photo" class="img-circle my-photo">
+      </figure>
+      <section class="about__description">
+        <p> Hello.My name is Adam Kopczyński. </p>
+        <p> I have been creating websites and programming in JavaScript for 8 months.</p>
+        <p> Every projects are very important for me becouse I love self-development </p>
+        <p> I also often participate in JavaScript meetups. </p>
+        <p> Currently I am learning React and Node </p>
+          <footer>
+    				<a class="cv" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf">Download CV</a>
+    				<a href="#kontakt">Contact</a>
+          </footer>
+      </section>
+    </main>
+    <section class="skills container">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="css skills__item">CSS 3</div>
+        <div class="html skills__item">HTML 5</div>
+        <div class="js skills__item">JavaScript</div>
+        <div class="sass skills__item">Sass</div>
+      </div>
+      <div class="row">
+        <div class="git skills__item">Git</div>
+        <div class="es6 skills__item">ES6</div>
+        <div class="jquery skills__item">jQuery</div>
+        <div class="react skills__item">React</div>
+      </div>
+    </section>
+    <section class="projects container">
+      <h2>Projects</h2>
+      <button class="project" aria-label="Click for more details" title="Click for more details">
+        <img src="" alt="Cosmic note" class="project-thumbnail">
+      </button>
+    </section>
+    <section class="contact container">
+      <h2>Contact</h2>
+      <form action="" class="contact-form" method="post">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+      </form>
+    </section>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
