@@ -1,0 +1,249 @@
+@import "settings";
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+h2{
+  font-family: $mainlyHeaderFont;
+}
+.top-menu{
+  padding: .2rem .8rem;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: .1s background-color linear;
+
+  &.scrolled{
+    background-color: $menuBg;
+    box-shadow: 0 0 10px #222;
+  }
+
+  &.open{
+    background-color: $dropdownBg;
+    .top-menu__head > a > svg{
+      color: $mainLight;
+    }
+  }
+
+  @include medium{
+    padding: .5rem 4rem;
+  }
+
+}
+.top-menu__header{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.top-menu__head{
+  width: 40%;
+  font-size: 1.6rem;
+  font-family: $mainlyHeaderFont;
+  line-height: 1.5;
+  margin-left: .4rem;
+  margin-top: .3rem;
+
+  a{
+    color: $mainLight;
+
+    svg{
+      color: $mainBlue;
+      transition: .2s color ease-in;
+
+    }
+  }
+}
+
+.top-menu__toggler{
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  margin-right: .6rem;
+  transition: .4s all ease-in-out;
+  color: $mainLight;
+
+  &:hover, &:focus{
+    border: none;
+  }
+}
+
+.dropdown{
+  font-size: 20px;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: .4s all linear;
+  padding: .8rem .5rem;
+
+  &.hidden{
+    transform: translateY(-100%);
+  }
+  &.open{
+    background-color: $dropdownBg;
+  }
+  ul{
+    width:100%;
+
+    li > a{
+      display: block;
+      font-family: $secondlyHeaderFont;
+      color: $mainLight;
+      position: relative;
+      min-height: 2rem;
+      width: 100%;
+      text-align: center;
+      padding: .3rem .6rem;
+      transition: .3s all ease-in-out;
+
+      &:hover, &.active{
+        background-color: $mainLight;
+        color: $mainBlue;
+      }
+
+    }
+  }
+}
+.particle-canvas{
+  display: none;
+}
+.main-header{
+  display: flex;
+  align-items: center;
+  background: {
+		image:  url('../../img/header.png');
+		position: center;
+		repeat: no-repeat;
+		size: cover;
+  }
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .main-header__content{
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+
+    h1{
+      color: $mainLight;
+      font-size: 2.7rem;
+      font-family: $mainlyHeaderFont;
+    }
+    p{
+      color: $mainBlue;
+      font-size: 1.5rem;
+      font-family: $secondlyHeaderFont;
+    }
+  }
+}
+.show-more{
+  display: block;
+  margin: 1rem .5rem;
+  padding: .4rem .7rem;
+  width: 50%;
+  text-align: center;
+  font-family: $secondlyHeaderFont;
+  color: $mainLight;
+  border: 3px solid $mainLight;
+  transition: .3s all ease-in;
+
+  &:hover{
+    background-color: $mainLight;
+    color: $mainBlue;
+  }
+}
+.mouse-icon{
+  width: 2rem;
+  height:3rem;
+  border-radius: 1rem;
+	display:block;
+	position:absolute;
+	opacity:0.8;
+  left:50%;
+  bottom: 3rem;
+  border: 4px solid $mainLight;
+  transition: .2s all linear;
+
+  &:hover{
+    background-color: $mainBlueHover;
+  }
+
+  .wheel{
+    width:.3rem;
+  	height: .5rem;
+  	display:block;
+  	position:absolute;
+  	top:.5rem;
+  	left: .6rem;
+    border-radius: 50%;
+    background-color: $mainLight;
+    animation: wheel 1.2s linear infinite;
+  }
+}
+.container{
+  padding:2rem;
+  font-family: $latoFont;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  text-align: justify;
+  color: $textColor;
+
+  h2{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    position: relative;
+    width: 15rem;
+    margin-bottom: 3rem;
+
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      width: 40%;
+      height: .5rem;
+      background-color: $mainBlue;
+      bottom: -.8rem;
+    }
+
+    &:before{
+      left: calc(50%);
+    }
+    &:after{
+      right: calc(50%);
+    }
+
+  }
+}
+
+.page-footer{
+  background-color: $mainBlue;
+  color: $mainLight;
+  font-family: $latoFont;
+  padding: .4rem .6rem;
+  text-align: center;
+}

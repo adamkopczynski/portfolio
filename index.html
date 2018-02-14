@@ -8,8 +8,11 @@
     <meta name="description" content="Adam Kopczyński - Junior Front-End Developer.">
     <meta name="author" content="Adam Kopczyński">
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Lato|Sigmar+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/styles.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script src="js/fontawesome-all.min.js" defer></script>
 
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,14 +24,11 @@
       <div class="top-menu__header">
         <div class="top-menu__head">
           <a href="/">
-            <div>
-              <p class="name">Adam Kopczyński</p>
-              <p class="profession">Front-End Developer</p>
-            </div>
+            <i class="fas fa-code"></i> AK
           </a>
         </div>
-        <button class="top-menu__toggler">X</button>
-        <nav id="menu" class="dropdown">
+        <button class="top-menu__toggler"><i class="fas fa-bars"></i></button>
+        <nav id="menu" class="dropdown hidden">
           <ul>
             <li><a class="active" href="#start">Start</a></li>
             <li><a href="#about">About</a></li>
@@ -42,31 +42,33 @@
     <canvas class="particle-canvas"></canvas>
     <header class="main-header">
       <div class="main-header__content">
-        <h1>Adam Kopczyński</h1>
+        <h1>Adam Kopczynski</h1>
         <p>Front-End Developer</p>
-        <a href="#about" class="more scroll"></a>
+        <a href="#about" class="show-more">Show more</a>
       </div>
-      <a href="#about" class="more scroll" aria-label ="scroll down"
-title="scroll down">more</a>
+      <a href="#about" class="mouse-icon scroll" aria-label ="scroll down"
+title="scroll down">
+        <div class="wheel"></div>
+      </a>
     </header>
     <main class="about container">
       <h2>About me</h2>
       <figure class="photo">
         <img src="" alt="My photo" class="img-circle my-photo">
       </figure>
-      <section class="about__description">
-        <p> Hello.My name is Adam Kopczyński. </p>
+      <section id="about" class="about__description">
+        <p> Hello. My name is Adam Kopczyński. I am 18. </p>
         <p> I have been creating websites and programming in JavaScript for 8 months.</p>
         <p> Every projects are very important for me becouse I love self-development </p>
         <p> I also often participate in JavaScript meetups. </p>
         <p> Currently I am learning React and Node </p>
           <footer>
     				<a class="cv" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf">Download CV</a>
-    				<a href="#kontakt">Contact</a>
+    				<a href="#contact">Contact</a>
           </footer>
       </section>
     </main>
-    <section class="skills container">
+    <section id="skills" class="skills container">
       <h2>Skills</h2>
       <div class="row">
         <div class="css skills__item">CSS 3</div>
@@ -87,15 +89,37 @@ title="scroll down">more</a>
         <img src="" alt="Cosmic note" class="project-thumbnail">
       </button>
     </section>
-    <section class="contact container">
+    <section id="contact" class="contact container">
       <h2>Contact</h2>
+      <p><a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
       <form action="" class="contact-form" method="post">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Message" required></textarea>
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" name="email" placeholder="Your email" required>
+        </p>
+        <p>
+          <label for="message">Message:</label>
+          <textarea name="message" placeholder="Message" required></textarea>
+        </p>
+        <button type="submit" class="btn confirm-btn">Send</button>
       </form>
     </section>
+    <nav class="bottom-nav" aria-label="links">
+      <ul>
+        <li><a href="https://github.com/adamkopczynski">Github</a></li>
+        <li><a href="https://github.com/adamkopczynski">LinkedIn</a></li>
+        <li><a href="https://github.com/adamkopczynski">Facebook</a></li>
+        <li><a href="https://github.com/adamkopczynski">CV</a></li>
+      </ul>
+    </nav>
+    <footer class="page-footer">
+      Copyright &copy; by Adam Kopczyński 2018
+    </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

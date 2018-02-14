@@ -1,0 +1,45 @@
+
+$mainBlue: rgb(16, 116, 158);
+$mainBlueHover: rgb(16, 116, 158);
+$dropdownBg: rgb(16, 116, 158);
+$menuBg: rgba(0, 61, 87, 0.78);
+$mainLight: rgb(245,245,245);
+$textColor: rgb(34,34,34);
+
+
+$mainlyHeaderFont: 'Bungee', cursive;
+$secondlyHeaderFont: 'Sigmar One', cursive;
+$bodyFont: 'Source Sans Pro', sans-serif;
+$latoFont: 'Lato', sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+.hidden{
+  visibility: hidden;
+  position: absolute;
+}
+
+@mixin onlyMedium{
+  @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium{
+  @media only screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin large{
+  @media only screen and (min-width: #{$desktop-width}){
+    @content;
+  }
+}
+
+@keyframes wheel{
+  50%{
+    top: 30%;
+  }
+}
