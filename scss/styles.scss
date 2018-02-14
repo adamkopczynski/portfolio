@@ -239,7 +239,62 @@ h2{
 
   }
 }
+.img-thumbnail{
+  width: 100%;
+  height: auto;
+  border: 5px solid $gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px $shadowColor;
+  margin-bottom: 2rem;
+}
+.about{
+  .about__content{
+    display: flex;
+    flex-direction: column;
 
+    .about__description{
+
+    }
+
+    .about__links{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      & > a{
+        display: block;
+        font-family: $mainlyHeaderFont;
+        padding: .3rem .5rem;
+        margin: .5rem;
+        border: 3px solid #000;
+        transition: .2s all ease-in;
+      }
+
+      .cv{
+        color: $mainLight;
+        background-color: $mainBlue;
+        border-color: $mainBlue;
+
+        &:hover{
+          color: $mainBlue;
+          background-color: $mainLight;
+        }
+      }
+
+      .contact{
+        color: $mainBlue;
+        background-color: $mainLight;
+        border-color: $mainBlue;
+
+        &:hover{
+          color: $mainLight;
+          background-color: $mainBlue;
+        }
+      }
+    }
+  }
+}
 .page-footer{
   background-color: $mainBlue;
   color: $mainLight;
