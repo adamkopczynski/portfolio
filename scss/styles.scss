@@ -135,10 +135,11 @@ h2{
   display: flex;
   align-items: center;
   background: {
-		image:  url('../../img/header.png');
+		image:  url('../../img/bg4.jpg');
 		position: center;
 		repeat: no-repeat;
 		size: cover;
+    attachment: fixed;
   }
   width: 100%;
   height: 100vh;
@@ -157,6 +158,7 @@ h2{
     p{
       color: $mainBlue;
       font-size: 1.5rem;
+      text-shadow: 0 0 1px $mainLight;
       font-family: $secondlyHeaderFont;
     }
   }
@@ -299,6 +301,19 @@ h2{
           background-color: $mainBlue;
         }
       }
+    }
+  }
+}
+.skills{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .skills__item{
+    width: 10rem;
+
+    .skills__icon{
+      width:100%;
     }
   }
 }
