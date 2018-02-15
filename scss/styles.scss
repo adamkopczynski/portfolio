@@ -248,18 +248,25 @@ h2{
   margin-bottom: 2rem;
 }
 .about{
-  .about__content{
+  .about__links,.about__content,.about__description{
     display: flex;
+  }
+
+  .about__content{
     flex-direction: column;
 
-    .about__description{
+      @include medium{
+        flex-direction: row;
+      }
 
+    .about__description{
+      flex-direction: column;
+      justify-content: center;
     }
 
     .about__links{
-      display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
 
       & > a{

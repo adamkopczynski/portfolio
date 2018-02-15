@@ -204,13 +204,20 @@ h2 {
   box-shadow: 3px 3px 8px #383838;
   margin-bottom: 2rem; }
 
+.about .about__links, .about .about__content, .about .about__description {
+  display: flex; }
+
 .about .about__content {
-  display: flex;
   flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    .about .about__content {
+      flex-direction: row; } }
+  .about .about__content .about__description {
+    flex-direction: column;
+    justify-content: center; }
   .about .about__content .about__links {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%; }
     .about .about__content .about__links > a {
       display: block;
