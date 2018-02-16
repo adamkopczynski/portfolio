@@ -24,6 +24,23 @@ body {
 h2 {
   font-family: "Bungee", cursive; }
 
+.btn {
+  display: block;
+  margin: 1rem .5rem;
+  padding: .4rem .7rem;
+  text-align: center;
+  font-family: "Sigmar One", cursive;
+  color: whitesmoke;
+  border: 3px solid #10749e;
+  transition: .3s all ease-in;
+  min-width: 10rem; }
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
 .top-menu {
   padding: .2rem .8rem;
   height: 4rem;
@@ -111,19 +128,36 @@ h2 {
 
 .main-header {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-image: url("../../img/bg4.jpg");
+  background-image: url("../../img/home-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 100vh;
+  height: 108vh;
   position: relative; }
+  .main-header::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #0a0a0a 0, rgba(19, 19, 19, 0.25) 50%, rgba(19, 19, 19, 0.25) 50%, #0a0a0a 100%), url(../images/noise.png);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0; }
   .main-header .main-header__content {
     position: relative;
-    display: inline-block;
-    padding-left: 15px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+    margin-top: 8rem;
+    z-index: 3; }
     .main-header .main-header__content h1 {
       color: whitesmoke;
       font-size: 2.7rem;
@@ -143,34 +177,39 @@ h2 {
   font-family: "Sigmar One", cursive;
   color: whitesmoke;
   border: 3px solid whitesmoke;
+  background-color: rgba(16, 116, 158, 0.25);
   transition: .3s all ease-in; }
   .show-more:hover {
     background-color: whitesmoke;
     color: #10749e; }
 
-.mouse-icon {
-  width: 2rem;
-  height: 3rem;
-  border-radius: 1rem;
-  display: block;
-  position: absolute;
-  opacity: 0.8;
-  left: 50%;
-  bottom: 3rem;
-  border: 4px solid whitesmoke;
-  transition: .2s all linear; }
-  .mouse-icon:hover {
-    background-color: #10749e; }
-  .mouse-icon .wheel {
-    width: .3rem;
-    height: .5rem;
+.main-header__bottom_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8rem;
+  z-index: 2; }
+  .main-header__bottom_buttons .mouse-icon {
+    width: 2rem;
+    height: 3rem;
+    border-radius: 1rem;
     display: block;
-    position: absolute;
-    top: .5rem;
-    left: .6rem;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    animation: wheel 1.2s linear infinite; }
+    position: relative;
+    opacity: 0.8;
+    border: 4px solid whitesmoke;
+    transition: .2s all linear; }
+    .main-header__bottom_buttons .mouse-icon:hover {
+      background-color: rgba(16, 116, 158, 0.25); }
+    .main-header__bottom_buttons .mouse-icon .wheel {
+      width: .3rem;
+      height: .5rem;
+      display: block;
+      position: absolute;
+      top: .5rem;
+      left: .6rem;
+      border-radius: 50%;
+      background-color: whitesmoke;
+      animation: wheel 1.2s linear infinite; }
 
 .container {
   padding: 2rem;
@@ -178,31 +217,57 @@ h2 {
   font-size: 1.1rem;
   line-height: 1.3;
   text-align: justify;
-  color: #222222; }
+  color: #222222;
+  position: relative; }
   .container h2 {
     text-align: center;
     margin: 0 auto;
     font-size: 1.8rem;
     position: relative;
-    width: 15rem;
-    margin-bottom: 3rem; }
-    .container h2:before, .container h2:after {
-      content: '';
-      position: absolute;
-      width: 40%;
-      height: .5rem;
-      background-color: #10749e;
-      bottom: -.8rem; }
-    .container h2:before {
-      left: calc(50%); }
-    .container h2:after {
-      right: calc(50%); }
+    width: 15rem; }
+
+.header-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 2rem; }
+  .header-separator .header-separator__square {
+    width: 10px;
+    height: 10px;
+    background-color: #10749e;
+    margin: 0 1rem;
+    transform: rotate(45deg); }
+  .header-separator .header-separator__line {
+    width: 4rem;
+    height: 1px;
+    background-color: #222222; }
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.section-decorator {
+  position: relative;
+  overflow: hidden;
+  color: whitesmoke;
+  top: -4rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  transform: perspective(900px) rotate(45deg);
+  box-shadow: 2.5px 2.5px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #10749e;
+  border: 8px solid whitesmoke; }
+  .section-decorator svg {
+    transform: perspective(999px) translateX(-2px) rotate(-45deg); }
 
 .img-thumbnail {
   width: 100%;
   height: auto;
-  border: 5px solid #d7d7d7;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 3px 3px 8px #383838;
   margin-bottom: 2rem; }
 
@@ -242,6 +307,46 @@ h2 {
       .about .about__content .about__links .contact:hover {
         color: whitesmoke;
         background-color: #10749e; }
+
+.projects {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .projects .single-project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
+    .projects .single-project .single-project__details {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background-color: rgba(16, 116, 158, 0.67);
+      transform: translateY(100%);
+      transition: 0.4s all cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+    .projects .single-project .single-project__thumbnail {
+      width: 100%;
+      height: 100%; }
+    .projects .single-project .single-project__code {
+      background-color: rgba(16, 116, 158, 0.25);
+      border-color: whitesmoke; }
+    .projects .single-project .single-project__live {
+      background-color: rgba(16, 116, 158, 0.25);
+      border-color: whitesmoke; }
+    .projects .single-project:hover {
+      cursor: pointer; }
+      .projects .single-project:hover .single-project__details {
+        transform: translateY(0); }
 
 .skills {
   display: flex;

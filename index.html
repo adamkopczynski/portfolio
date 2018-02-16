@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
     <meta name="description" content="Adam Kopczyński - Junior Front-End Developer.">
     <meta name="author" content="Adam Kopczyński">
 
@@ -48,14 +48,28 @@
         <p>Front-End Developer</p>
         <a href="#about" class="show-more">Show more</a>
       </div>
-      <a href="#about" class="mouse-icon scroll" aria-label ="scroll down"
-title="scroll down">
-        <div class="wheel"></div>
-      </a>
+      <div class="main-header__bottom_buttons">
+        <a href="#about" class="mouse-icon scroll" aria-label ="scroll down"
+  title="scroll down">
+          <div class="wheel"></div>
+        </a>
+      </div>
     </header>
     <main class="about container">
-      <h2>About me</h2>
       <section id="about" class="about">
+        <div class="about__header">
+          <div class="section-decorator">
+            <i class="fas fa-user"></i>
+          </div>
+          <header>
+            <h2>About me</h2>
+            <div class="header-separator">
+              <div class="header-separator__line"></div>
+              <div class="header-separator__square"></div>
+              <div class="header-separator__line"></div>
+            </div>
+          </header>
+        </div>
         <figure class="about__content">
           <img src="img/myphoto.jpg" alt="My photo" class="img-thumbnail my-photo">
           <figcaption class="about__description">
@@ -72,13 +86,34 @@ title="scroll down">
       </section>
     </main>
     <section class="projects container">
-      <h2>Projects</h2>
-      <button class="project" aria-label="Click for more details" title="Click for more details">
-        <img src="" alt="Cosmic note" class="project-thumbnail">
-      </button>
+      <header>
+        <h2>Projects</h2>
+        <div class="header-separator">
+          <div class="header-separator__line"></div>
+          <div class="header-separator__square"></div>
+          <div class="header-separator__line"></div>
+        </div>
+      </header>
+      <div class="single-project" aria-label="Click for more details" title="Click for more details">
+        <img src="img/bg2.jpeg" alt="Cosmic note" class="single-project__thumbnail">
+        <div class="single-project__details">
+          <h3 class="single-project__title">Cosmic Note </h3>
+          <div class="btn-group">
+            <button class="single-project__code btn">Source</button>
+            <button class="single-project__live btn">Live</button>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="skills" class="skills container">
-      <h2>Skills</h2>
+      <header>
+        <h2>Skills</h2>
+        <div class="header-separator">
+          <div class="header-separator__line"></div>
+          <div class="header-separator__square"></div>
+          <div class="header-separator__line"></div>
+        </div>
+      </header>
         <div class="css skills__item">
           <object type="image/svg+xml" data="img/icons/css3.svg" class="skills__icon">
             CSS3
@@ -139,7 +174,14 @@ title="scroll down">
         </div>
     </section>
     <section id="contact" class="contact container">
-      <h2>Contact</h2>
+      <header>
+        <h2>Contact</h2>
+        <div class="header-separator">
+          <div class="header-separator__line"></div>
+          <div class="header-separator__square"></div>
+          <div class="header-separator__line"></div>
+        </div>
+      </header>
       <p><a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
       <form action="" class="contact-form" method="post">
         <p>
