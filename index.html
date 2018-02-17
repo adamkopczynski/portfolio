@@ -78,8 +78,8 @@
             <p> I also often participate in JavaScript meetups. </p>
             <p> Currently I am learning React and Node with a view to becoming a fullstack developer. </p>
             <span class="about__links">
-      				<a class="cv" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf">Download CV</a>
-      				<a class="contact" href="#contact">Contact</a>
+      				<a class="cv btn" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf">Download CV</a>
+      				<a class="contact-btn btn" href="#contact">Contact</a>
             </span>
           </figcaption>
         </figure>
@@ -94,7 +94,7 @@
           <div class="header-separator__line"></div>
         </div>
       </header>
-      <div class="single-project" aria-label="Click for more details" title="Click for more details">
+      <div class="single-project" >
         <img src="img/bg2.jpeg" alt="Cosmic note" class="single-project__thumbnail">
         <div class="single-project__details">
           <h3 class="single-project__title">Cosmic Note </h3>
@@ -114,64 +114,66 @@
           <div class="header-separator__line"></div>
         </div>
       </header>
-        <div class="css skills__item">
-          <object type="image/svg+xml" data="img/icons/css3.svg" class="skills__icon">
-            CSS3
-          </object>
-        </div>
-        <div class="html skills__item">
-          <object type="image/svg+xml" data="img/icons/html5.svg" class="skills__icon">
-            HTML5
-          </object>
-        </div>
-        <div class="js skills__item">
-          <object type="image/svg+xml" data="img/icons/js.svg" class="skills__icon">
-            JavaScript
-          </object>
-        </div>
-        <div class="sass skills__item">
-          <object type="image/svg+xml" data="img/icons/sass.svg" class="skills__icon">
-            Sass
-          </object>
-        </div>
-        <div class="git skills__item">
-          <object type="image/svg+xml" data="img/icons/git.svg" class="skills__icon">
-            Git
-          </object>
-        </div>
-        <div class="es6 skills__item">
-          <object type="image/svg+xml" data="img/icons/gulp.svg" class="skills__icon">
-            Gulp
-          </object>
-        </div>
-        <div class="jquery skills__item">
-          <object type="image/svg+xml" data="img/icons/npm.svg" class="skills__icon">
-            npm
-          </object>
-        </div>
-        <div class="react skills__item">
-          <object type="image/svg+xml" data="img/icons/webpack.svg" class="skills__icon">
-            Webpack
-          </object>
-        </div>
-        <div class="react skills__item">
-          <object type="image/svg+xml" data="img/icons/react.svg" class="skills__icon">
-            React
-          </object>
-        </div>
-        <div class="react skills__item">
-          <object type="image/svg+xml" data="img/icons/jquery.svg" class="skills__icon">
-            jQuery
-          </object>
-        </div>
-        <div class="react skills__item">
-          <object type="image/svg+xml" data="img/icons/es6.svg" class="skills__icon">
-            ES6
-          </object>
-        </div>
-        <div class="react skills__item">
-          <img src="img/icons/redux.png" alt="Redux" class="skills__icon">
-        </div>
+        <ul class="row skills__list">
+          <li class="css skills__item">
+            <object type="image/svg+xml" data="img/icons/css3.svg" class="skills__icon">
+              CSS3
+            </object>
+          </li>
+          <li class="html skills__item">
+            <object type="image/svg+xml" data="img/icons/html5.svg" class="skills__icon">
+              HTML5
+            </object>
+          </li>
+          <li class="js skills__item">
+            <object type="image/svg+xml" data="img/icons/js.svg" class="skills__icon">
+              JavaScript
+            </object>
+          </li>
+          <li class="sass skills__item">
+            <object type="image/svg+xml" data="img/icons/sass.svg" class="skills__icon">
+              Sass
+            </object>
+          </li>
+          <li class="git skills__item">
+            <object type="image/svg+xml" data="img/icons/git.svg" class="skills__icon">
+              Git
+            </object>
+          </li>
+          <li class="es6 skills__item">
+            <object type="image/svg+xml" data="img/icons/gulp.svg" class="skills__icon">
+              Gulp
+            </object>
+          </li>
+          <li class="jquery skills__item">
+            <object type="image/svg+xml" data="img/icons/npm.svg" class="skills__icon">
+              npm
+            </object>
+          </li>
+          <li class="react skills__item">
+            <object type="image/svg+xml" data="img/icons/webpack.svg" class="skills__icon">
+              Webpack
+            </object>
+          </li>
+          <li class="react skills__item">
+            <object type="image/svg+xml" data="img/icons/react.svg" class="skills__icon">
+              React
+            </object>
+          </li>
+          <li class="react skills__item">
+            <object type="image/svg+xml" data="img/icons/jquery.svg" class="skills__icon">
+              jQuery
+            </object>
+          </li>
+          <li class="react skills__item">
+            <object type="image/svg+xml" data="img/icons/es6.svg" class="skills__icon">
+              ES6
+            </object>
+          </li>
+          <li class="react skills__item">
+            <img src="img/icons/redux.png" alt="Redux" class="skills__icon">
+          </li>
+        </ul>
     </section>
     <section id="contact" class="contact container">
       <header>
@@ -182,33 +184,49 @@
           <div class="header-separator__line"></div>
         </div>
       </header>
-      <p><a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
       <form action="" class="contact-form" method="post">
-        <p>
-          <label for="name">Name:</label>
-          <input type="text" name="name" placeholder="Your name" required>
-        </p>
-        <p>
-          <label for="email">Email:</label>
-          <input type="email" name="email" placeholder="Your email" required>
-        </p>
-        <p>
-          <label for="message">Message:</label>
-          <textarea name="message" placeholder="Message" required></textarea>
-        </p>
-        <button type="submit" class="btn confirm-btn">Send</button>
+          <h3>Contact form</h3>
+          <label for="name">
+            <span class="contact-form__field">Name</span>
+            <span class="contact-form__field--required">
+              <i class="fas fa-star"></i>
+            </span>
+          </label>
+          <input type="text" class="contact-form__input" name="name" placeholder="Your name" required>
+          <label for="email">
+            <span class="contact-form__field">Email</span>
+            <span class="contact-form__field--required">
+              <i class="fas fa-star"></i>
+            </span>
+          </label>
+          <input type="email" class="contact-form__input" name="email" placeholder="Your email" required>
+          <label for="message">
+            <span class="contact-form__field">Message</span>
+            <span class="contact-form__field--required">
+              <i class="fas fa-star"></i>
+            </span>
+          </label>
+          <textarea name="message" class="contact-form__textarea" placeholder="Message" required></textarea>
+        <button type="submit" class="btn contact-form__confirm-btn">Send</button>
       </form>
+
+      <div class="contact-info">
+        <h3>Contact information</h3>
+        <p>email: <a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
+        <p>tel: <a href="tel:669624179">669624179</a></p>
+      </div>
     </section>
-    <nav class="bottom-nav" aria-label="links">
-      <ul>
-        <li><a href="https://github.com/adamkopczynski">Github</a></li>
-        <li><a href="https://github.com/adamkopczynski">LinkedIn</a></li>
-        <li><a href="https://github.com/adamkopczynski">Facebook</a></li>
-        <li><a href="https://github.com/adamkopczynski">CV</a></li>
-      </ul>
-    </nav>
     <footer class="page-footer">
-      Copyright &copy; by Adam Kopczyński 2018
+      <nav class="footer-nav" aria-label="links">
+        <ul class="row footer-nav__links">
+          <li><a class="footer-nav__single-link github" href="https://github.com/adamkopczynski" aria-label="Visit my github" title="Visit my github"><i class="fab fa-github"></i></a></li>
+          <li><a class="footer-nav__single-link ln" href="https://github.com/adamkopczynski" aria-label="Visit my linkedIn" title="Visit my linkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li><a class="footer-nav__single-link fb" href="https://github.com/adamkopczynski" aria-label="Visit my facebook" title="Visit my facebook"><i class="fab fa-facebook"></i></a></li>
+          <li><a class="footer-nav__single-link cv" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf" aria-label="Download CV" title="Download CV"><i class="fas fa-file-alt"></i></a></li>
+        </ul>
+      </nav>
+      <div class="footer-separator"></div>
+      &copy; 2018 Adam Kopczyński - All rights reserved
     </footer>
 
     <script src="js/main.js"></script>

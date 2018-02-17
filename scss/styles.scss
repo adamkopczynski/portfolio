@@ -1,4 +1,5 @@
 @import "settings";
+@import "grid";
 
 * {
 	margin: 0;
@@ -20,15 +21,19 @@ h2{
   font-family: $mainlyHeaderFont;
 }
 .btn{
-	display: block;
-	margin: 1rem .5rem;
-	padding: .4rem .7rem;
-	text-align: center;
-	font-family: $secondlyHeaderFont;
-	color: $mainLight;
-	border: 3px solid $mainBlue;
-	transition: .3s all ease-in;
 	min-width: 10rem;
+	display: block;
+	font-family: $mainlyHeaderFont;
+	text-align: center;
+	color: $mainLight;
+	padding: .3rem .5rem;
+	margin: .5rem;
+	border: 3px solid #000;
+	transition: .2s all ease-in;
+
+	&:hover{
+		cursor: pointer;
+	}
 }
 .btn-group{
 	display: flex;
@@ -47,7 +52,7 @@ h2{
   transition: .1s background-color linear;
 
   &.scrolled{
-    background-color: $menuBg;
+    background-color: rgba(10,10,10, .8);
     box-shadow: 0 0 10px #222;
   }
 
@@ -162,7 +167,7 @@ h2{
   }
 	box-shadow: 0 1px 8px 0 rgba(0,0,0,.8);
   width: 100%;
-  height: 108vh;
+  height: 110vh;
   position: relative;
 
 	&::after{
@@ -183,7 +188,6 @@ h2{
 		justify-content: center;
 		align-items: flex-start;
     padding-left: 15px;
-		margin-top: 8rem;
 		z-index: 3;
 
     h1{
@@ -218,9 +222,12 @@ h2{
 }
 .main-header__bottom_buttons{
 	display: flex;
+	justify-content: center;
+	position: absolute;
 	width: 100%;
 	justify-content: center;
-	margin-top: 8rem;
+	bottom: 5rem;
+	left:0;
 	z-index: 2;
 
 	.mouse-icon{
@@ -343,14 +350,6 @@ h2{
       justify-content: space-around;
       width: 100%;
 
-      & > a{
-        display: block;
-        font-family: $mainlyHeaderFont;
-        padding: .3rem .5rem;
-        margin: .5rem;
-        border: 3px solid #000;
-        transition: .2s all ease-in;
-      }
 
       .cv{
         color: $mainLight;
@@ -363,7 +362,7 @@ h2{
         }
       }
 
-      .contact{
+      .contact-btn{
         color: $mainBlue;
         background-color: $mainLight;
         border-color: $mainBlue;
@@ -408,42 +407,197 @@ h2{
     .single-project__thumbnail{
       width:100%;
 			height: 100%;
+			transition: .35s all linear;
     }
-		.single-project__code{
-			background-color: $mainBlueHover;
-			border-color: $mainLight;
-		}
+		.single-project__code,
 		.single-project__live{
 			background-color: $mainBlueHover;
 			border-color: $mainLight;
+
+			&:hover{
+				background-color: $mainLight;
+				color:$mainBlue;
+			}
+		}
+		.single-project__title{
+			font-family: $mainlyHeaderFont;
+			font-size: 2rem;
+			color: $mainLight;
 		}
 
-    &:hover{
-      cursor: pointer;
+    &:hover, &:focus{
 
       .single-project__details{
         transform: translateY(0);
+      }
+			.single-project__thumbnail{
+        transform: scale(1.2);
       }
     }
   }
 }
 .skills{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  .skills__item{
-    width: 10rem;
+	.skills__list{
+		margin: 0 auto;
+		width: 100%;
+		padding: 0 1rem;
+		.skills__item{
+	    width: 6rem;
+			filter: grayscale(1.1);
+			transition: .25s all linear;
 
-    .skills__icon{
-      width:100%;
-    }
-  }
+	    .skills__icon{
+	      width:100%;
+	    }
+
+			&:hover{
+				filter: grayscale(0);
+				transform: scale(1.1);
+			}
+	  }
+	}
+
+}
+.contact{
+	padding: 0;
+
+	h3{
+		font-family: $mainlyHeaderFont;
+		font-size: 1.2em;
+		color: $dark;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.contact-form{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 10px 15px;
+		margin: 1rem .5rem;
+		box-shadow: 0 5px 25px 0 rgba(0,0,0,.1);
+		border-radius: 2px;
+
+	}
+
+	.contact-form__field{
+		font-family: $latoFont;
+		font-size: 1em;
+	}
+
+	.contact-form__input, .contact-form__textarea{
+		border: 1px solid $dark;
+		border-radius: 2px;
+		padding: 5px 10px;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.contact-form__textarea{
+		resize: vertical;
+		min-height: 150px;
+	}
+
+	.contact-form__field--required{
+		vertical-align: top;
+		font-size: .45em;
+		color: #e53935;
+		margin-left: 2.5px;
+	}
+
+	.contact-form__confirm-btn{
+		background-color: $mainBlue;
+		border-color: $mainBlue;
+
+		&:hover{
+			color: $mainBlue;
+			background-color: $mainLight;
+		}
+	}
+
+	.contact-info{
+		padding: 10px 15px;
+		box-shadow: 0 5px 25px 0 rgba(0,0,0,.1);
+		font-family: $latoFont;
+		color: $dark;
+
+		& > p > a{
+			color: $dark;
+		}
+	}
 }
 .page-footer{
-  background-color: $mainBlue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  background-color: #212121;
   color: $mainLight;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,.8);
   font-family: $latoFont;
-  padding: .4rem .6rem;
+  padding: 1rem;
   text-align: center;
+
+	.footer-nav{
+		width: 60%;
+
+		.footer-nav__links{
+			justify-content: space-around;
+
+			.footer-nav__single-link{
+				display: inline-block;
+				border: 2px solid $mainBlue;
+				padding: .5rem;
+				color: $mainLight;
+				width: 40px;
+				height: 40px;
+				transition: .3s all cubic-bezier(.83,.03,.62,.38);
+
+				&.github{
+					border-color: #614381;
+					background-color: rgba(97,67,129,.1);
+
+						&:hover{
+							background-color: rgba(97,67,129,1);
+						}
+				}
+
+				&.fb{
+					background-color: rgba(59,89,152,.1);
+					border-color: #3b5998;
+
+					&:hover{
+						background-color: rgba(59,89,152,1);
+					}
+				}
+
+				&.cv{
+					background-color: rgba(255,107,107,.1);
+					border-color: #ff6b6b;
+
+					&:hover{
+						background-color: rgba(255,107,107,1);
+					}
+				}
+
+				&.ln{
+					background-color: rgba(0,119,181,.1);
+					border-color: #0077b5;
+
+					&:hover{
+						background-color: rgba(0,119,181,1);
+					}
+				}
+			}
+
+		}
+
+	}
+
+	.footer-separator{
+		height: 2px;
+		margin: 10px 0;
+		width: 50%;
+		background-image: radial-gradient(ellipse at center,rgba(255,255,255,.1) 0,transparent 100%);
+	}
 }

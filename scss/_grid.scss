@@ -1,0 +1,13 @@
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+
+.col{
+  padding: 0 2rem;
+}
