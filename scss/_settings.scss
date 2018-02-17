@@ -11,33 +11,41 @@ $shadowColor: rgb(56, 56, 56);
 $descriptionBgBlue: rgba(16, 116, 158, 0.67);
 
 
-$mainlyHeaderFont: 'Bungee', cursive;
+$mainlyFont: 'Bungee', cursive;
 $secondlyHeaderFont: 'Sigmar One', cursive;
 $bodyFont: 'Source Sans Pro', sans-serif;
 $latoFont: 'Lato', sans-serif;
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
+$phone-horizonatal-width: 640px;
+$tablet-horizontal-width: 1024px;
+$tablet-vertical-width: 768px;
+
 
 .hidden{
   visibility: hidden;
   position: absolute;
 }
 
-@mixin onlyMedium{
-  @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@mixin onlyTablet{
+  @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$tablet-horizontal-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small{
+  @media only screen and (min-width: #{$phone-horizonatal-width}) {
     @content;
   }
 }
 
 @mixin medium{
-  @media only screen and (min-width: #{$tablet-width}) {
+  @media only screen and (min-width: #{$tablet-vertical-width}) {
     @content;
   }
 }
 
 @mixin large{
-  @media only screen and (min-width: #{$desktop-width}){
+  @media only screen and (min-width: #{$tablet-horizontal-width}){
     @content;
   }
 }

@@ -18,12 +18,12 @@ body{
   padding: 0;
 }
 h2{
-  font-family: $mainlyHeaderFont;
+  font-family: $mainlyFont;
 }
 .btn{
 	min-width: 10rem;
 	display: block;
-	font-family: $mainlyHeaderFont;
+	font-family: $mainlyFont;
 	text-align: center;
 	color: $mainLight;
 	padding: .3rem .5rem;
@@ -33,6 +33,10 @@ h2{
 
 	&:hover{
 		cursor: pointer;
+	}
+
+	@include large{
+		min-width: 7rem;
 	}
 }
 .btn-group{
@@ -80,7 +84,7 @@ h2{
 .top-menu__head{
   width: 40%;
   font-size: 1.6rem;
-  font-family: $mainlyHeaderFont;
+  font-family: $mainlyFont;
   line-height: 1.5;
   margin-left: .4rem;
   margin-top: .3rem;
@@ -107,6 +111,10 @@ h2{
   &:hover, &:focus{
     border: none;
   }
+
+	@include medium{
+		display: none;
+	}
 }
 
 .dropdown{
@@ -115,10 +123,6 @@ h2{
   top: 4rem;
   left: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   transition: .4s all linear;
   padding: .8rem .5rem;
 
@@ -128,27 +132,89 @@ h2{
   &.open{
     background-color: $dropdownBg;
   }
-  ul{
+  & > ul{
     width:100%;
+		display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  text-align: center;
 
-    li > a{
-      display: block;
+		& > li, & > li > a{
+			display: block;
+			width:100%;
+		}
+
+		& > li{
+			background-color: transparent;
+
+			&:hover, &.active{
+        background-color: $mainLight;
+        & > a{
+					color: $mainBlue;
+				}
+      }
+		}
+
+    & > li > a{
       font-family: $secondlyHeaderFont;
       color: $mainLight;
       position: relative;
       min-height: 2rem;
-      width: 100%;
       text-align: center;
       padding: .3rem .6rem;
       transition: .3s all ease-in-out;
 
-      &:hover, &.active{
-        background-color: $mainLight;
-        color: $mainBlue;
-      }
-
     }
+
   }
+
+	@include medium{
+		position: relative;
+		top: 0;
+		left: auto;
+		width:50%;
+		font-family: $mainlyFont;
+
+		& > ul{
+			flex-direction: row;
+
+			& > li{
+				position: relative;
+
+				&:after{
+					content: '';
+					width: 35px;
+					height: 0;
+					background-color: $mainBlue;
+					position: absolute;
+					display: block;
+					left: 50%;
+					bottom: -5px;
+					-ms-transform: translateX(-50%);
+					transform: translateX(-50%);
+					transition: .2s height ease-in-out 0s;
+				}
+
+				&:hover, &.active{
+					background-color: transparent;
+
+					&:after{
+						height: 4px;
+					}
+
+					& > a{
+						color: $mainLight;
+					}
+	      }
+			}
+
+			& > li > a{
+				font-family: $latoFont;
+				font-size: .8em;
+			}
+
+		}
+	}
 }
 .particle-canvas{
   display: none;
@@ -193,7 +259,7 @@ h2{
     h1{
       color: $mainLight;
       font-size: 2.7rem;
-      font-family: $mainlyHeaderFont;
+      font-family: $mainlyFont;
     }
     p{
       color: $mainBlue;
@@ -202,6 +268,10 @@ h2{
       font-family: $secondlyHeaderFont;
     }
   }
+
+	@include medium{
+		align-items: center;
+	}
 }
 .show-more{
   display: block;
@@ -324,9 +394,20 @@ h2{
 .img-thumbnail{
   width: 100%;
   height: auto;
+	margin: 0 auto;
   border-radius: 10px;
   box-shadow: 3px 3px 8px $shadowColor;
   margin-bottom: 2rem;
+
+	@include small{
+		width: 60%;
+	}
+	@include medium{
+		width: 35%;
+	}
+	@include large{
+		width: 25%;
+	}
 }
 .about{
   .about__links,.about__content,.about__description{
@@ -338,14 +419,21 @@ h2{
 
       @include medium{
         flex-direction: row;
+				justify-content: space-between;
       }
 
     .about__description{
       flex-direction: column;
       justify-content: center;
+			font-family: $latoFont;
+
+			@include medium{
+        width: 50%;
+      }
     }
 
     .about__links{
+			margin-top: 20px;
       flex-direction: row;
       justify-content: space-around;
       width: 100%;
@@ -418,11 +506,16 @@ h2{
 				background-color: $mainLight;
 				color:$mainBlue;
 			}
+
 		}
 		.single-project__title{
-			font-family: $mainlyHeaderFont;
+			font-family: $mainlyFont;
 			font-size: 2rem;
 			color: $mainLight;
+
+			@include large{
+				font-size: 1.5rem;
+			}
 		}
 
     &:hover, &:focus{
@@ -434,6 +527,14 @@ h2{
         transform: scale(1.2);
       }
     }
+		@include medium{
+			width: 50%;
+		}
+
+		@include large{
+			width: 30%;
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.8);
+		}
   }
 }
 .skills{
@@ -462,11 +563,22 @@ h2{
 	padding: 0;
 
 	h3{
-		font-family: $mainlyHeaderFont;
+		font-family: $mainlyFont;
 		font-size: 1.2em;
 		color: $dark;
 		text-align: center;
 		margin-bottom: 20px;
+	}
+
+	.contact__content{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@include large{
+			flex-direction: row;
+			justify-content: space-around;
+		}
 	}
 
 	.contact-form{
@@ -478,6 +590,16 @@ h2{
 		box-shadow: 0 5px 25px 0 rgba(0,0,0,.1);
 		border-radius: 2px;
 
+		@include medium{
+			width: 80%;
+			margin: 1rem auto;
+		}
+
+		@include large{
+			width: 50%;
+			margin: 1rem auto;
+		}
+
 	}
 
 	.contact-form__field{
@@ -486,12 +608,21 @@ h2{
 	}
 
 	.contact-form__input, .contact-form__textarea{
-		border: 1px solid $dark;
+		border: 1px solid #666;
 		border-radius: 2px;
 		padding: 5px 10px;
 		margin-bottom: 20px;
 		margin-top: 10px;
 		width: 100%;
+		transition: .2s all linear;
+
+		&:hover, &:focus{
+			border-color: $mainBlue;
+		}
+
+		&:focus{
+			box-shadow: 0 0 5px 0 $mainBlue;
+		}
 	}
 
 	.contact-form__textarea{
@@ -518,12 +649,23 @@ h2{
 
 	.contact-info{
 		padding: 10px 15px;
-		box-shadow: 0 5px 25px 0 rgba(0,0,0,.1);
+		margin-bottom: 40px;
 		font-family: $latoFont;
 		color: $dark;
+		line-height: 1.5;
+
+		svg{
+			color: $mainBlue;
+		}
 
 		& > p > a{
+			font-size: 1.2em;
 			color: $dark;
+		}
+
+		@include large{
+			width: 40%;
+			padding: 10px 30px;
 		}
 	}
 }
@@ -590,6 +732,10 @@ h2{
 				}
 			}
 
+		}
+
+		@include large{
+			width: 30%;
 		}
 
 	}

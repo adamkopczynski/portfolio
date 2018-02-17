@@ -32,17 +32,17 @@
         <button class="top-menu__toggler"><i class="fas fa-bars"></i></button>
         <nav id="menu" class="dropdown hidden">
           <ul>
-            <li><a class="active" href="#start">Start</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active menu-item"><a href="#home">Home</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#skills">Skills</a></li>
+            <li class="menu-item"><a href="#projects">Projects</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </nav>
     <canvas class="particle-canvas"></canvas>
-    <header class="main-header">
+    <header id="home" class="main-header">
       <div class="main-header__content">
         <h1>Adam Kopczynski</h1>
         <p>Front-End Developer</p>
@@ -73,10 +73,10 @@
         <figure class="about__content">
           <img src="img/myphoto.jpg" alt="My photo" class="img-thumbnail my-photo">
           <figcaption class="about__description">
-            <p> Hello, my name is Adam Kopczyński. I am 18. </p>
-            <p> I have been creating websites and programming in JavaScript for 8 months.</p>
-            <p> I also often participate in JavaScript meetups. </p>
-            <p> Currently I am learning React and Node with a view to becoming a fullstack developer. </p>
+            <p> Hello, my name is Adam Kopczyński. I am 18.
+              I have been creating websites and programming in JavaScript for 8 months.
+              I also often participate in JavaScript meetups.
+              Currently I am learning React and Node with a view to becoming a fullstack developer. </p>
             <span class="about__links">
       				<a class="cv btn" href="files/CV.pdf" download="CV - Adam Kopczynski.pdf">Download CV</a>
       				<a class="contact-btn btn" href="#contact">Contact</a>
@@ -184,36 +184,38 @@
           <div class="header-separator__line"></div>
         </div>
       </header>
-      <form action="" class="contact-form" method="post">
-          <h3>Contact form</h3>
-          <label for="name">
-            <span class="contact-form__field">Name</span>
-            <span class="contact-form__field--required">
-              <i class="fas fa-star"></i>
-            </span>
-          </label>
-          <input type="text" class="contact-form__input" name="name" placeholder="Your name" required>
-          <label for="email">
-            <span class="contact-form__field">Email</span>
-            <span class="contact-form__field--required">
-              <i class="fas fa-star"></i>
-            </span>
-          </label>
-          <input type="email" class="contact-form__input" name="email" placeholder="Your email" required>
-          <label for="message">
-            <span class="contact-form__field">Message</span>
-            <span class="contact-form__field--required">
-              <i class="fas fa-star"></i>
-            </span>
-          </label>
-          <textarea name="message" class="contact-form__textarea" placeholder="Message" required></textarea>
-        <button type="submit" class="btn contact-form__confirm-btn">Send</button>
-      </form>
+      <div class="contact__content">
+        <form action="" class="contact-form" method="post">
+            <h3>Contact form</h3>
+            <label for="name">
+              <span class="contact-form__field">Name</span>
+              <span class="contact-form__field--required">
+                <i class="fas fa-star"></i>
+              </span>
+            </label>
+            <input type="text" class="contact-form__input" name="name" placeholder="Your name" required>
+            <label for="email">
+              <span class="contact-form__field">Email</span>
+              <span class="contact-form__field--required">
+                <i class="fas fa-star"></i>
+              </span>
+            </label>
+            <input type="email" class="contact-form__input" name="email" placeholder="Your email" required>
+            <label for="message">
+              <span class="contact-form__field">Message</span>
+              <span class="contact-form__field--required">
+                <i class="fas fa-star"></i>
+              </span>
+            </label>
+            <textarea name="message" class="contact-form__textarea" placeholder="Message" required></textarea>
+          <button type="submit" class="btn contact-form__confirm-btn">Send</button>
+        </form>
 
-      <div class="contact-info">
-        <h3>Contact information</h3>
-        <p>email: <a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
-        <p>tel: <a href="tel:669624179">669624179</a></p>
+        <div class="contact-info">
+          <h3>Contact information</h3>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:akadamkopczynski@gmail.com">akadamkopczynski@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:669624179">669624179</a></p>
+        </div>
       </div>
     </section>
     <footer class="page-footer">
