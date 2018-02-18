@@ -463,12 +463,12 @@ h2{
     }
   }
 }
-.projects{
+.projects-wrapper{
   padding: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+
+	.projects{
+		justify-content: flex-start;
+	}
 
   .single-project{
     width:100%;
@@ -533,6 +533,7 @@ h2{
 
 		@include large{
 			width: 30%;
+			margin-left: 3%;
 			box-shadow: 0 0 5px 0 rgba(0,0,0,.8);
 		}
   }

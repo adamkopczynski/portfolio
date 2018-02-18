@@ -85,7 +85,7 @@
         </figure>
       </section>
     </main>
-    <section class="projects container">
+    <section id="projects" class="projects-wrapper container">
       <header>
         <h2>Projects</h2>
         <div class="header-separator">
@@ -94,13 +94,25 @@
           <div class="header-separator__line"></div>
         </div>
       </header>
-      <div class="single-project" >
-        <img src="img/bg2.jpeg" alt="Cosmic note" class="single-project__thumbnail">
-        <div class="single-project__details">
-          <h3 class="single-project__title">Cosmic Note </h3>
-          <div class="btn-group">
-            <button class="single-project__code btn">Source</button>
-            <button class="single-project__live btn">Live</button>
+      <div class="projects row">
+        <div class="single-project" >
+          <img src="img/bg2.jpeg" alt="Cosmic note" class="single-project__thumbnail">
+          <div class="single-project__details">
+            <h3 class="single-project__title">Cosmic Note </h3>
+            <div class="btn-group">
+              <a class="single-project__code btn">Source</a>
+              <a class="single-project__live btn">Live</a>
+            </div>
+          </div>
+        </div>
+        <div class="single-project" >
+          <img src="img/bg2.jpeg" alt="Tic Tac Toe" class="single-project__thumbnail">
+          <div class="single-project__details">
+            <h3 class="single-project__title">Tic Tac Toe</h3>
+            <div class="btn-group">
+              <a class="single-project__code btn" href="https://codepen.io/adam99/pen/zdJvez">Source</a>
+              <a class="single-project__live btn" href="https://codepen.io/adam99/full/zdJvez/">Live</a>
+            </div>
           </div>
         </div>
       </div>
@@ -185,7 +197,7 @@
         </div>
       </header>
       <div class="contact__content">
-        <form action="" class="contact-form" method="post">
+        <form action="https://formspree.io/akadamkopczynski@gmail.com" class="contact-form" method="POST">
             <h3>Contact form</h3>
             <label for="name">
               <span class="contact-form__field">Name</span>
@@ -209,6 +221,8 @@
             </label>
             <textarea name="message" class="contact-form__textarea" placeholder="Message" required></textarea>
           <button type="submit" class="btn contact-form__confirm-btn">Send</button>
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_next" value="//site.io/thanks.html" />
         </form>
 
         <div class="contact-info">
@@ -231,6 +245,8 @@
       &copy; 2018 Adam Kopczyński - All rights reserved
     </footer>
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
