@@ -19,11 +19,18 @@ $latoFont: 'Lato', sans-serif;
 $phone-horizonatal-width: 640px;
 $tablet-horizontal-width: 1024px;
 $tablet-vertical-width: 768px;
+$small-phone-height: 470px;
+$small-phone-width: 316px;
 
 
 .hidden{
   visibility: hidden;
   position: absolute;
+}
+@mixin verySmall{
+  @media only screen and (max-height: #{$small-phone-height}){
+    @content;
+  }
 }
 
 @mixin onlyTablet{
