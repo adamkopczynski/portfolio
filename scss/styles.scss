@@ -493,9 +493,14 @@ h2{
 		width: 35%;
 	}
 	@include large{
-		width: 25%;
+		width: 310px;
+		height: 310px;
 	}
-}
+
+	@include extraLarge{
+		width: 400px;
+		height: 400px;
+	}
 .about{
   .about__links,.about__content,.about__description{
     display: -webkit-box;
@@ -909,4 +914,5 @@ h2{
 		width: 50%;
 		background-image: radial-gradient(ellipse at center,rgba(255,255,255,.1) 0,transparent 100%);
 	}
+}
 }

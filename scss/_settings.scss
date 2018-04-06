@@ -18,6 +18,7 @@ $latoFont: 'Lato', sans-serif;
 
 $phone-horizonatal-width: 640px;
 $tablet-horizontal-width: 1024px;
+$desktop-width: 1800px;
 $tablet-vertical-width: 768px;
 $small-phone-height: 470px;
 $small-phone-width: 316px;
@@ -54,6 +55,18 @@ $small-phone-width: 316px;
 @mixin large{
   @media only screen and (min-width: #{$tablet-horizontal-width}){
     @content;
+  }
+}
+
+@mixin extraLarge{
+  @media only screen and (min-width: #{$desktop-width}){
+    @content;
+  }
+}
+
+@-webkit-keyframes wheel{
+  50%{
+    top: 30%;
   }
 }
 
