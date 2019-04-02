@@ -8,7 +8,7 @@ html{
 }
 
 body{
-  font-family: 'Baloo', cursive;
+  font-family: 'Comfortaa', cursive;
 }
 
 .page-header{
@@ -22,6 +22,7 @@ body{
     font-size: 2em;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
   }
 }
 
@@ -30,7 +31,8 @@ body{
   transform: skew(0deg, -12deg);
   border-radius: 10%;
   margin-top: -12%;  
-  margin-left: -20%;
+  margin-left: -10%;
+  width: 110vw;
   
 
   .skewed-content {
@@ -71,5 +73,14 @@ body{
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+
+.section{
+  
+  .section-title{
+    font-size: 2.5em;
+    color: #514a9d;
+    text-align: center;
   }
 }
