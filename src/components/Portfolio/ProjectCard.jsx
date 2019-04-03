@@ -6,7 +6,8 @@ import reactImage from 'assets/images/react.png';
 const PortfolioCard = ({image, imgSize, mainTechnology, technologies, description, name, ...props}) => {
 
     const techLogo = {
-        'react': reactImage
+        'react': reactImage,
+        'node': 'https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png'
     }
 
     return(
@@ -18,7 +19,7 @@ const PortfolioCard = ({image, imgSize, mainTechnology, technologies, descriptio
                 </div>
             }
 
-            {image && <img src={image} alt='Project image.' className='project-image' />}
+            {image && <img src={image} alt='Project ui.' className='project-image' />}
 
             <div className="card-content">
                 <h3 className="card-title">{name}</h3>
@@ -33,6 +34,19 @@ const PortfolioCard = ({image, imgSize, mainTechnology, technologies, descriptio
             </div>
         </div>
     )
+}
+
+PortfolioCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    mainTechnology: PropTypes.string.isRequired,
+    technologies: PropTypes.array.isRequired,
+    description: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+}
+
+PortfolioCard.defaultProps = {
+    image: '',
+    name: 'project'
 }
 
 export default PortfolioCard;

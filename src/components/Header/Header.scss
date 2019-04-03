@@ -1,0 +1,13 @@
+.menu{
+
+    &-item{
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none !important; 
+        transition: .15s all linear;
+
+        &:hover{
+            color: #48dbfb;
+        }
+    }
+}

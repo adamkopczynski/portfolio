@@ -27,7 +27,7 @@ body{
 }
 
 .skewed-bg{
-  background: linear-gradient(to right, #24c6dc, #514a9d);
+  background: linear-gradient(to right, #4a69bd, #514a9d);
   transform: skew(0deg, -12deg);
   border-radius: 10%;
   margin-top: -12%;  
@@ -36,12 +36,21 @@ body{
   
 
   .skewed-content {
+    padding-top: 12%;
     transform: skew(0deg, 12deg);
+    width: 100%;
   }
 }
 
 .top-section{
   height: 80vh;
+  padding: 100px;
+  color: #ffffff;
+
+  .top-section__title{
+    color: #48dbfb;
+    font-size: 3em;
+  }
 }
 
 .button{
