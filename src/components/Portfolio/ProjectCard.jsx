@@ -8,6 +8,7 @@ const PortfolioCard = ({image, imgSize, mainTechnology, technologies, descriptio
 
     const techLogo = {
         'react': reactImage,
+        'react-native': 'https://cdn6.aptoide.com/imgs/c/8/f/c8f548826728f7ed9e4eaf3f7bbf5fd6_icon.png?w=240',
         'node': 'https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png'
     }
 
