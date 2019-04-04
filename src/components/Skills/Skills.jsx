@@ -2,7 +2,7 @@ import React from 'react';
 
 import Divider from 'components/Divider';
 import CodeIcon from 'assets/icons/code.svg';
-import ManagmentIcon from 'assets/icons/managment.svg';
+import ManagementIcon from 'assets/icons/managment.svg';
 import AgileIcon from 'assets/icons/agile.svg';
 
 const Skills = () => {
@@ -22,7 +22,7 @@ const Skills = () => {
                         <div className="skill-card-item">
                             
                             <div className="skill-card-header">
-                                <img src={AgileIcon} />
+                                <img src={ManagementIcon} />
                                 <h3>Project Managment</h3>
                             </div>
 

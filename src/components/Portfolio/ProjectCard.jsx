@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from 'components/Button';
 import reactImage from 'assets/images/react.png';
 
-const PortfolioCard = ({image, imgSize, mainTechnology, technologies, description, name, ...props}) => {
+const PortfolioCard = ({image, imgSize, mainTechnology, technologies, description, demo, github, name, ...props}) => {
 
     const techLogo = {
         'react': reactImage,
@@ -31,8 +31,8 @@ const PortfolioCard = ({image, imgSize, mainTechnology, technologies, descriptio
                 </div>
 
                 <div className="btn-group">
-                    <Button to='#'>Demo</Button>
-                    <Button to='#'>Code</Button>
+                    {demo && <Button target="_blank" to={demo}>Demo</Button>}
+                    {github && <Button target="_blank" to={github}>Code</Button>}
                 </div>
 
                 <div className="technologies">

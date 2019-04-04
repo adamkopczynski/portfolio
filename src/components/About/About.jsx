@@ -1,6 +1,7 @@
 import React from 'react';
 import Divider from 'components/Divider';
 import Button from 'components/Button';
+import CV from 'assets/files/Adam Kopczynski - CV.pdf';
 
 const About = () => {
 
@@ -24,7 +25,7 @@ const About = () => {
                                 <p>
                                     I am junior who want to improve his programming skills.
                                 </p>
-                                <Button href="https://adamkopczynski.github.io/files/CV.pdf" download='Adam Kopczynski - CV.pdf'>Download CV</Button>
+                                <Button href={CV} download='Adam Kopczynski - CV.pdf'>Download CV</Button>
                             </div>
                         </div>
                     </div>
