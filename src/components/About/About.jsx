@@ -23,7 +23,8 @@ const About = () => {
                                 <h2>Adam Kopczyński</h2>
                                 <h3>Junior React/Javascript Developer</h3>
                                 <p>
-                                    I am junior who want to improve his programming skills.
+                                    I am an enthusiast of new technologies, loved with React and NodeJS. 
+                                    I try to improve my skills every day. I often participate in conferences and workshops.
                                 </p>
                                 <Button href={CV} download='Adam Kopczynski - CV.pdf'>Download CV</Button>
                             </div>

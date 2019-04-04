@@ -15,16 +15,17 @@
 .page-header{
     position: fixed;
     top: 0;
-    padding: 10px 40px;
+    padding: 18px 40px;
     z-index: 1;
     width: 100vw;
+    transition: .2s all ease-in;
 
     .row{
         align-items: center;
     }
   
     .logo{
-      font-size: 2em;
+      font-size: 1.8em;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
