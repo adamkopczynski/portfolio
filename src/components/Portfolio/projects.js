@@ -5,7 +5,7 @@ const projects = [
         image: 'https://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/11/facebook-events-app-CONTENT-2017.jpg',
         mainTechnology: 'react',
         demo: null,
-        github: 'github.com/adamkopczynski/pl-events',
+        github: null,
         technologies: ['react', 'scss', 'firebase']
     },
     {
@@ -14,7 +14,7 @@ const projects = [
         image: 'https://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/11/facebook-events-app-CONTENT-2017.jpg',
         mainTechnology: 'react-native',
         demo: 'https://expo.io/@akopczynski/pan-cytat',
-        github: 'github.com/adamkopczynski/pl-events',
+        github: 'https://github.com/adamkopczynski/pancytat',
         technologies: ['react-native', 'expo', 'native-base']
     },
     {
@@ -22,8 +22,8 @@ const projects = [
         description: 'Fetch data from yt api and allow to listen music in bg.',
         image: 'https://www.androidcentral.com/sites/androidcentral.com/files/styles/xlarge_wm_brw/public/article_images/2018/06/google-play-music-youtube-music-playlists-blue-mat.jpg?itok=2jrzJUKZ',
         mainTechnology: 'react',
-        demo: null,
-        github: 'github.com/adamkopczynski/pl-events',
+        demo: 'https://github.com/adamkopczynski/react-sound',
+        github: 'https://github.com/adamkopczynski/react-sound',
         technologies: ['react', 'yt-api', 'redux']
     },
     {
@@ -31,8 +31,8 @@ const projects = [
         description: 'Chat app in NodeJS.',
         image: 'https://udemy-images.udemy.com/course/750x422/99554_d15d_13.jpg',
         mainTechnology: 'node',
-        demo: null,
-        github: 'github.com/adamkopczynski/pl-events',
+        demo: 'https://chat-app-ak.herokuapp.com/',
+        github: 'https://github.com/adamkopczynski/node-chat-app',
         technologies: ['react', 'node', 'websockets']
     }
 ]
