@@ -1,0 +1,45 @@
+.section.about{
+
+    .info-card{
+        padding: 0 2.5rem 2.5rem 2.5rem;
+        padding-top: 7rem;
+        position: relative;
+        margin-top: 5rem;
+        position: relative;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: 0 .3125rem 2.5rem 0 rgba(0,0,0,.09);
+
+        img{
+            border-radius: 50%;
+            position: absolute;
+            top: -2.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25%;
+            height: auto;
+            box-shadow: 0 .3125rem 2.5rem 0 rgba(0,0,0,.09);
+            margin-bottom: 2rem;
+        }
+
+        h2, h3{
+            color: #4a69bd;
+        }
+
+        h2{
+            font-size: 2rem;
+        }
+
+        h3{
+            font-size: 1.2rem;
+        }
+
+
+        p{
+            color: #dfe4ea;
+            font-size: .9rem;
+        }
+    }
+
+}

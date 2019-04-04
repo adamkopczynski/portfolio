@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="col-md-5">
                     <nav className="page-nav ">
                         <ul className="menu nav justify-content-end">
-                            <li><a href="#home" className="menu-item">Home</a></li>
+                            <li><a href="#" className="menu-item">Home</a></li>
                             <li><a href="#about" className="menu-item">About me</a></li>
                             <li><a href="#portfolio" className="menu-item">Portfolio</a></li>
                             <li><a href="#skills" className="menu-item">Skills</a></li>

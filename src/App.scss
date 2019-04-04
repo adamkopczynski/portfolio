@@ -9,22 +9,25 @@ html{
 
 body{
   font-family: 'Comfortaa', cursive;
+  background: linear-gradient(to top, #ece9e6, #ffffff);
+  overflow-x: hidden;
 }
 
 .skewed-bg{
   background: linear-gradient(to right, #4a69bd, #514a9d);
-  transform: skew(0deg, -12deg);
-  border-radius: 10%;
-  margin-top: -12%;  
-  margin-left: -10%;
-  width: 110vw;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 30%;
+  height: 100%;
+  width: 100%;
   
 
   .skewed-content {
     padding-top: 12%;
     margin-left: 10%;
-    transform: skew(0deg, 12deg);
-    width: 100%;
+    transform: skew(0, 6deg);
+    width: 80%;
   }
 }
 
@@ -39,38 +42,6 @@ body{
   }
 }
 
-.button{
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0;
-  font-weight: 500;
-  line-height: normal;
-  background-color: transparent;
-  position: relative;
-  border: none;
-  font-size: .6875rem;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  border-radius: 6px;
-  margin: 0;
-  font-family: Rubik,sans-serif;
-  overflow: hidden;
-
-  &:before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #49f3f3;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
 .section{
   
   .section-title{
@@ -78,4 +49,8 @@ body{
     color: #514a9d;
     text-align: center;
   }
+}
+
+.row{
+  margin: 0 -5px;
 }
