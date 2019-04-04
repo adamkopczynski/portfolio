@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+import classnames from 'classnames';
 
 const Header = () => {
 
+    const [scrolled, setScrolled] = useState(window.scrollY > 50);
+
+    document.addEventListener('scroll', () => setScrolled(window.scrollY > 50));
+
     return(
-        <header className="page-header" id="home">
+        <header className={classnames("page-header", {"scrolled": scrolled})} id="home">
             <div className="row justify-content-between">
                 <div className="col-sm-6 col-md-2">
                     <a className="logo" href="https:\adamkopczynski.github.io" title="Adam Kopczynski - Junior React Developer">

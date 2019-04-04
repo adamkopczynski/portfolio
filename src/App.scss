@@ -11,21 +11,6 @@ body{
   font-family: 'Comfortaa', cursive;
 }
 
-.page-header{
-  position: fixed;
-  top: 0;
-  padding: 20px 40px;
-  z-index: 1;
-  width: 100vw;
-
-  .logo{
-    font-size: 2em;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-}
-
 .skewed-bg{
   background: linear-gradient(to right, #4a69bd, #514a9d);
   transform: skew(0deg, -12deg);
@@ -37,13 +22,14 @@ body{
 
   .skewed-content {
     padding-top: 12%;
+    margin-left: 10%;
     transform: skew(0deg, 12deg);
     width: 100%;
   }
 }
 
 .top-section{
-  height: 80vh;
+  height: 70vh;
   padding: 100px;
   color: #ffffff;
 

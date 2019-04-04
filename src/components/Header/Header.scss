@@ -11,3 +11,26 @@
         }
     }
 }
+
+.page-header{
+    position: fixed;
+    top: 0;
+    padding: 10px 40px;
+    z-index: 1;
+    width: 100vw;
+
+    .row{
+        align-items: center;
+    }
+  
+    .logo{
+      font-size: 2em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    &.scrolled{
+        background: rgba(55, 79, 146, 0.623);
+    }
+}
