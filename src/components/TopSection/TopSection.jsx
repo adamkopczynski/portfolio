@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Divider from 'components/Divider';
+import Button from 'components/Button';
 
 const TopSection = () => {
 
@@ -14,7 +15,7 @@ const TopSection = () => {
                                 <h1 className="top-section__title">Hello!</h1>
                                 <Divider />
                                 <p>I am junior <strong>javascript developer</strong>.</p>
-                                <a href="#about" className="button">Show More</a>
+                                <Button to="#about" color='white'>Show more</Button>
                             </div>
                         </div>
                     </div>

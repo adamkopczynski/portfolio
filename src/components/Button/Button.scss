@@ -1,0 +1,46 @@
+.custom-btn{
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    border: none;
+    transform: translate3d(0,0,0);
+    border-radius: 6px;
+    overflow: hidden;
+    border: none;
+    background-color: #514a9d  !important;
+    margin: 0 10px;
+    margin-top: 10px;
+    
+    span{
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        padding: 10px 30px;
+        color: #fff;
+        background-color: transparent;
+        font-size: .9rem;
+        transition: .2s color linear .3s;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #49f3f3;
+        border-radius: 6px;
+        transform: translateX(-100%);
+        transition: .375s all ease-in;
+        z-index: 0;
+    }
+
+    &:hover:before{
+        transform: translateX(0);
+    }
+
+    &:hover span{
+        color: #514a9d;
+    }
+}
