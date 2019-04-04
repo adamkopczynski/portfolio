@@ -1,0 +1,31 @@
+.page-footer{
+    min-height: 25vh;
+    color: #fff;
+    background: linear-gradient(to right, #4a69bd, #514a9d);
+    padding: 50px;
+
+    p.cyan{
+        color: #48dbfb;
+    }
+
+    .social-media{
+
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .social-media__item{
+            text-decoration: none !important;
+            color: #fff;
+            font-size: 1.8rem;
+            transition: .2s all ease-out;
+
+            &:hover{
+                color: #48dbfb;
+            }
+        }
+    }
+
+}
