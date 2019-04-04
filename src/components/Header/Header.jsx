@@ -6,6 +6,13 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(window.scrollY > 50);
 
     document.addEventListener('scroll', () => setScrolled(window.scrollY > 50));
+    document.addEventListener('resize', () => {
+        const pageNav = document.querySelector('.page-header');
+
+        if(window.innerWidth > 768){
+            pageNav.style.display = 'flex';
+        }
+    })
 
     // Grab all the scroll class anchor elements, use whatever class you like
     const menuItems = document.querySelectorAll('.menu-item');
@@ -70,7 +77,7 @@ const Header = () => {
     return(
         <header className={classnames("page-header", {"scrolled": scrolled})}>
             <div className="row justify-content-between">
-                <div className="col-sm-10 col-md-4 row justify-content-between">
+                <div className="col-sm-10 col-md-4 nav-row">
                     <a className="logo" href="https:\adamkopczynski.github.io" title="Adam Kopczynski - Junior React Developer">
                         Adam Kopczynski
                     </a>
