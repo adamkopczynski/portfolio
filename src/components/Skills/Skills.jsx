@@ -18,7 +18,7 @@ const Skills = () => {
 
             <div className="skills-content">
                 <div className="row justify-content-center">
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-sm-12 col-lg-4">
                         <div className="skill-card-item">
                             
                             <div className="skill-card-header">
@@ -34,7 +34,7 @@ const Skills = () => {
 
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-sm-12 col-lg-4">
                         <div className="skill-card-item active">
                             
                             <div className="skill-card-header">
@@ -55,7 +55,7 @@ const Skills = () => {
 
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-sm-12 col-lg-4">
                         <div className="skill-card-item">
                             
                             <div className="skill-card-header">

@@ -15,7 +15,7 @@ const TopSection = () => {
                                 <h1 className="top-section__title">React JS developer</h1>
                                 <Divider />
                                 <p>I am a junior <strong>React developer</strong>, fascinated with new technologies.</p>
-                                <Button to="#about" color='white'>Show more</Button>
+                                <Button to="#about" className="show-more" color='white'>Show more</Button>
                             </div>
                         </div>
                     </div>

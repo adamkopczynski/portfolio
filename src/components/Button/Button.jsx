@@ -6,6 +6,7 @@ const Button = (props) => {
         children,
         color,
         border,
+        className,
         ...rest
     } = props;
 
@@ -13,7 +14,7 @@ const Button = (props) => {
         <a 
             href={to} 
             role="button"
-            className="custom-btn"
+            className={`custom-btn ${className ? className : ''}`}
             {...rest}>
             <span>
                 {children}

@@ -9,31 +9,32 @@ const Header = () => {
 
     // Grab all the scroll class anchor elements, use whatever class you like
     const menuItems = document.querySelectorAll('.menu-item');
-        // Now add an event listeners to those element
-        menuItems.forEach(elem => {
-                
-                    elem.addEventListener('click',function(e) {
-                    e.preventDefault();
-                    
-                    // 1. Get the element id to which you want to scroll
-                    const scrollElemId = elem.href.split('#')[1];
-                    
-                    // 2. find that node from the document
-                    const scrollEndElem = document.getElementById(scrollElemId);
-                    
-                    // 3. and well animate to that node.. 
-                    const anim = requestAnimationFrame((timestamp) => {
-                    const stamp = timestamp || new Date().getTime();
-                    const duration = 1200;
-                    const start = stamp;
-                    
-                    const startScrollOffset = window.pageYOffset;
-                    const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
-                    
-                    scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
-                    })
-                })
-    });
+
+    const scroll = (elem) => {
+        elem.addEventListener('click',function(e) {
+            e.preventDefault();
+            
+            // 1. Get the element id to which you want to scroll
+            const scrollElemId = elem.href.split('#')[1];
+            
+            // 2. find that node from the document
+            const scrollEndElem = document.getElementById(scrollElemId);
+            
+            // 3. and well animate to that node.. 
+            const anim = requestAnimationFrame((timestamp) => {
+            const stamp = timestamp || new Date().getTime();
+            const duration = 1200;
+            const start = stamp;
+            
+            const startScrollOffset = window.pageYOffset;
+            const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+            
+            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+            })
+        })
+    }
+
+    menuItems.forEach(elem => scroll(elem));
     
     const easeInCubic = function (t) { return t*t*t }
  
@@ -54,15 +55,30 @@ const Header = () => {
         }
     }
 
+    function toggleMenu(){
+        const pageNav = document.querySelector('.page-header');
+        const toggleMenuButtonIcon = document.querySelector('.toggle-menu-btn > i.fas');
+        const menu = document.querySelector('.menu.nav');
+        const hidden = !toggleMenuButtonIcon.classList.contains('fa-times');
+    
+        menu.style.display = hidden ? 'flex' : 'none';
+        pageNav.classList.toggle('open');
+        toggleMenuButtonIcon.classList.toggle('fa-bars');
+        toggleMenuButtonIcon.classList.toggle('fa-times');
+    }
+
     return(
         <header className={classnames("page-header", {"scrolled": scrolled})}>
             <div className="row justify-content-between">
-                <div className="col-sm-6 col-md-4">
+                <div className="col-sm-10 col-md-4 row justify-content-between">
                     <a className="logo" href="https:\adamkopczynski.github.io" title="Adam Kopczynski - Junior React Developer">
                         Adam Kopczynski
                     </a>
+                    <button className="toggle-menu-btn" onClick={toggleMenu}>
+                        <i className="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 col-sm-12">
                     <nav className="page-nav ">
                         <ul className="menu nav justify-content-end">
                             <li><a href="#home" className="menu-item">Home</a></li>

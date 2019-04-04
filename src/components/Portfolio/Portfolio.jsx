@@ -19,7 +19,7 @@ const Portfolio = () => {
                 <div className="row justify-content-center">
                     {
                         projects.map(item => 
-                            <div className="col-sm-12 col-md-4">
+                            <div className="col-sm-12 col-md-6 col-lg-4">
                                 <PortfolioCard {...item} />
                             </div>    
                         )
