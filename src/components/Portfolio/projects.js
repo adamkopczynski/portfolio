@@ -1,8 +1,13 @@
+import pc from 'assets/images/pc.jpg';
+import poliEvents from 'assets/images/poli.jpg';
+import chat from 'assets/images/chat.jpg';
+import yt from 'assets/images/yt.jpg';
+
 const projects = [
     {
-        name: 'Wydarzenia SSPŁ',
+        name: 'Poli~Events',
         description: 'Project for Lodz University of technolgy\'s community.',
-        image: 'https://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/11/facebook-events-app-CONTENT-2017.jpg',
+        image: poliEvents,
         mainTechnology: 'react',
         demo: null,
         github: null,
@@ -11,7 +16,7 @@ const projects = [
     {
         name: 'Pan Cytat',
         description: 'Project for Pan Cytat.',
-        image: 'https://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/11/facebook-events-app-CONTENT-2017.jpg',
+        image: pc,
         mainTechnology: 'react-native',
         demo: 'https://expo.io/@akopczynski/pan-cytat',
         github: 'https://github.com/adamkopczynski/pancytat',
@@ -20,7 +25,7 @@ const projects = [
     {
         name: 'Youtube music',
         description: 'Fetch data from yt api and allow to listen music in bg.',
-        image: 'https://www.androidcentral.com/sites/androidcentral.com/files/styles/xlarge_wm_brw/public/article_images/2018/06/google-play-music-youtube-music-playlists-blue-mat.jpg?itok=2jrzJUKZ',
+        image: yt,
         mainTechnology: 'react',
         demo: 'https://github.com/adamkopczynski/react-sound',
         github: 'https://github.com/adamkopczynski/react-sound',
@@ -29,7 +34,7 @@ const projects = [
     {
         name: 'Chat App',
         description: 'Chat app in NodeJS.',
-        image: 'https://udemy-images.udemy.com/course/750x422/99554_d15d_13.jpg',
+        image: chat,
         mainTechnology: 'node',
         demo: 'https://chat-app-ak.herokuapp.com/',
         github: 'https://github.com/adamkopczynski/node-chat-app',

@@ -13,9 +13,9 @@ const Footer = () => {
                 <div className="col-md-2">
                     <div className="social-media">
                         <ul>
-                            <li><a href="https://www.facebook.com/adam.kopczynski.3" target="_blank" className="social-media__item"><i className="fab fa-facebook-square"></i></a></li>
-                            <li><a href="https://github.com/adamkopczynski" target="_blank" className="social-media__item"><i className="fab fa-github"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/adam-kopczyński-015911145/" target="_blank" className="social-media__item"><i className="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/adam.kopczynski.3" target="_blank" rel="noopener noreferrer" className="social-media__item"><i className="fab fa-facebook-square"></i></a></li>
+                            <li><a href="https://github.com/adamkopczynski" target="_blank" rel="noopener noreferrer" className="social-media__item"><i className="fab fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/adam-kopczyński-015911145/" rel="noopener noreferrer" target="_blank" className="social-media__item"><i className="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

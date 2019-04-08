@@ -36,7 +36,7 @@ const Header = () => {
             const startScrollOffset = window.pageYOffset;
             const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
             
-            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+            scrollToElem(start, stamp, duration, scrollEndElemTop-100, startScrollOffset);
             })
         })
     }

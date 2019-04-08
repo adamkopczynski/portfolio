@@ -34,6 +34,10 @@
             color: #514a9d;
             opacity: 0;
             transition: .2s all ease-in;
+
+            ul{
+                text-align: left;
+            }
         }
 
         &:hover{
