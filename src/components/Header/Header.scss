@@ -19,7 +19,7 @@
 .page-header{
     position: fixed;
     top: 0;
-    padding: 18px 40px;
+    padding: 10px 40px;
     z-index: 999;
     width: 100vw;
     transition: .2s all ease-in;
@@ -63,7 +63,7 @@
     }
 
     .page-header{
-        padding: 15px;
+        padding: 10px;
 
         .logo{
             font-size: 1.5rem;
@@ -75,16 +75,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
-        &-item{
-            color: #ffffff;
-            padding: 10px 15px;
-            text-decoration: none !important; 
-            transition: .15s all linear;
-    
-            &:hover{
-                color: #48dbfb;
-            }
+    .menu-item{
+        color: #ffffff;
+        display: block;
+        padding: 5px 15px;
+        text-decoration: none !important; 
+        transition: .15s all linear;
+        margin-bottom: 10px;
+
+        &:hover{
+            color: #48dbfb;
         }
     }
 }

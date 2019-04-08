@@ -30,7 +30,7 @@ const Header = () => {
             // 3. and well animate to that node.. 
             const anim = requestAnimationFrame((timestamp) => {
             const stamp = timestamp || new Date().getTime();
-            const duration = 1200;
+            const duration = 800;
             const start = stamp;
             
             const startScrollOffset = window.pageYOffset;

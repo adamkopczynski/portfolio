@@ -14,9 +14,9 @@
         img{
             border-radius: 50%;
             position: absolute;
-            top: -2.7rem;
+            top: 0;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
             width: 25%;
             height: auto;
             box-shadow: 0 .3125rem 2.5rem 0 rgba(0,0,0,.09);
@@ -42,4 +42,11 @@
         }
     }
 
+}
+
+@media (min-width: 1520px){
+
+    .section.about .info-card img{
+        width: 20%;
+    }
 }
