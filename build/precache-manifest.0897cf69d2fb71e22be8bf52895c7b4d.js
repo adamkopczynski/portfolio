@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/poli.4eb774f9.jpg"
   },
   {
-    "revision": "0e6867f3654ea082e034",
-    "url": "/static/css/main.8c7ff516.chunk.css"
+    "revision": "c366bd87f28c5cc6c9f4",
+    "url": "/static/css/main.09dd3b20.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/pc.5423a7fd.jpg"
   },
   {
-    "revision": "0e6867f3654ea082e034",
-    "url": "/static/js/main.21dcd19b.chunk.js"
+    "revision": "c366bd87f28c5cc6c9f4",
+    "url": "/static/js/main.a31a80dd.chunk.js"
   },
   {
     "revision": "2d48c7208aa82d424041d02c9ff54f80",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/yt.641c47aa.jpg"
   },
   {
-    "revision": "28a247159f7058b0ca7ed1b96e7897b9",
-    "url": "/static/media/Adam Kopczynski - CV.28a24715.pdf"
+    "revision": "2351a191d5980470ec3b9d16ef54925b",
+    "url": "/static/media/Adam Kopczynski - CV.2351a191.pdf"
   },
   {
     "revision": "5a1a70f37f40a6e878456b0a9c290cb9",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.5e328f69.chunk.css"
   },
   {
-    "revision": "1b67fde8754050fe7b652e99dd04ce7d",
+    "revision": "a42b5bd709e79de7b70261b5e2c35a22",
     "url": "/index.html"
   }
 ];
