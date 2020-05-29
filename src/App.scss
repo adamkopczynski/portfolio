@@ -1,27 +1,26 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-body{
-  font-family: 'Comfortaa', cursive;
+body {
+  font-family: "Comfortaa", cursive;
   background: linear-gradient(to top, #ece9e6, #ffffff);
 }
 
-.skewed-bg{
-  background: linear-gradient(to right, #4a69bd, #514a9d);
+.skewed-bg {
+  background: linear-gradient(to right, #005c97, #363795);
   transform: skewY(-6deg);
   transform-origin: top left;
   border-bottom-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 30%;
   height: 100%;
   width: 100%;
-  
 
   .skewed-content {
     padding-top: 12%;
@@ -31,26 +30,27 @@ body{
   }
 }
 
-.top-section{
+.top-section {
   width: 100%;
   padding: 100px 0;
   color: #ffffff;
+  text-align: center;
 
-  .top-section__title{
+  .top-section__title {
     color: #48dbfb;
     font-size: 3em;
+    margin-bottom: 2rem;
   }
 }
 
-.section{
-  
-  .section-title{
+.section {
+  .section-title {
     font-size: 2.5em;
     color: #514a9d;
     text-align: center;
   }
 }
 
-.row{
+.row {
   margin: 0 0;
 }
